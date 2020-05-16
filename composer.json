@@ -1,0 +1,17 @@
+{
+  "name": "boxybird/bb-theme",
+  "authors": [
+    {
+      "name": "Andrew Rhyand",
+      "email": "hello@andrewrhyand.com"
+    }
+  ],
+  "require": {
+    "illuminate/support": "^7.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "BoxyBird\\Theme\\": "src/"
+    }
+  }
+}
