@@ -1,15 +1,24 @@
 ## WordPress/Vue Starter Theme Using Inertia.js
 
-This is an opinionated starter theme I use on personal projects.
+A bare-bones example theme using Inertia with Vue, and the WordPress Inertia adapter.
 
-### What's Included / Benefits
+### Installation
+Clone this repository to WordPress themes directory.
 
-- Vue.js
-- Inertia.js
-- Laravel Mix
-- Tailwind CSS
-- No WordPress Loop
-- Custom WP_Query Transformers
+```bash
+cd *your-theme-name*
+
+composer install
+
+npm install
+npm run dev
+```
+
+### References
+https://inertiajs.com/
+https://github.com/boxybird/inertia-wordpress
+https://vuejs.org/
+
 
 ### License
 [MIT license](https://opensource.org/licenses/MIT)

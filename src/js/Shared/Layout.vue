@@ -1,24 +1,16 @@
 <template>
   <div>
     <Header />
-    <main class="mt-4">
+    <main>
       <slot></slot>
     </main>
     <Footer />
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
-
-export default {
-  components: {
-    Header,
-    Footer
-  }
-}
 </script>
 
-<style>
-</style>
+<style></style>

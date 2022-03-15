@@ -1,5 +1,5 @@
 {
-  "name": "boxybird/bb-theme",
+  "name": "boxybird/wordpress-inertia-starter-theme",
   "authors": [
     {
       "name": "Andrew Rhyand",
@@ -7,11 +7,6 @@
     }
   ],
   "require": {
-    "illuminate/support": "^7.11"
-  },
-  "autoload": {
-    "psr-4": {
-      "BoxyBird\\Theme\\": "src/"
-    }
+    "boxybird/inertia-wordpress": "^0.5.6"
   }
 }

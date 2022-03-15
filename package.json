@@ -1,31 +1,28 @@
 {
-  "name": "bb-spbh-theme",
+  "name": "wordpress-inertia-starter-theme",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A bare-bones example theme using Inertia with Vue, and the WordPress Inertia adapter.",
   "scripts": {
-    "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "dev": "npx mix",
+    "watch": "npx mix watch",
+    "build": "npx mix -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxybird/wordpress-inertia-starter-theme.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@inertiajs/inertia": "^0.1.9",
-    "@inertiajs/inertia-vue": "^0.1.4",
-    "vue": "^2.6.11"
-  },
+  "license": "MIT",
+  "homepage": "https://github.com/boxybird/wordpress-inertia-starter-theme#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "collect.js": "^4.25.0",
-    "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4",
-    "postcss-nesting": "^7.0.1",
-    "tailwindcss": "^1.4.6",
-    "vue-template-compiler": "^2.6.11"
+    "laravel-mix": "^6.0.43"
+  },
+  "dependencies": {
+    "@inertiajs/inertia": "^0.11.0",
+    "@inertiajs/inertia-vue3": "^0.6.0",
+    "@inertiajs/progress": "^0.2.7",
+    "vue": "^3.2.31",
+    "vue-loader": "^17.0.0"
   }
 }
