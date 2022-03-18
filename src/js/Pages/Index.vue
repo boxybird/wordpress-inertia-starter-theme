@@ -1,9 +1,9 @@
 <template>
-  <section class="container space-y-4">
+  <section>
     <h1>List of Posts:</h1>
     <article v-for="post in props.posts" :key="post.ID">
       <Link :href="post.post_name">
-        <h3 class="font-bold text-lg">{{ post.post_title }}</h3>
+        <h3>{{ post.post_title }}</h3>
       </Link>
     </article>
   </section>
