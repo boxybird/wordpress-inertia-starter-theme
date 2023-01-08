@@ -10,8 +10,7 @@ add_filter( 'script_loader_tag', function ( $tag, $handle, $src ) {
     $url = esc_url($src);
 
 	switch ( $handle ) {
-        case 'dev_bundle':
-        case 'prod_bundle':
+        case 'vite_bundle':
 
             return <<<EOD
                 <link rel="modulepreload" href=" $url">
@@ -33,7 +32,7 @@ add_action('wp_enqueue_scripts', function () {
     // serve dev bundle
 
     if ($environment === 'development' || $environment === 'local') {
-        wp_enqueue_script('dev_bundle', 'http://localhost:3000/src/js/app.js', [], true);
+        wp_enqueue_script('vite_bundle', 'http://localhost:3000/src/js/app.js', [], true);
         wp_enqueue_script('vite_client', 'http://localhost:3000/@vite/client', [], true);
     }
 
