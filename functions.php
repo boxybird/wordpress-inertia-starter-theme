@@ -40,7 +40,7 @@ add_action('wp_enqueue_scripts', function () {
 
     if ($environment === 'production') {
         $version = md5_file(get_stylesheet_directory() . '/dist/app.js');
-        wp_enqueue_script('prod_bundle', get_stylesheet_directory_uri() . '/dist/app.js', [], $version, true);
+        wp_enqueue_script('vite_bundle', get_stylesheet_directory_uri() . '/dist/app.js', [], $version, true);
     }
 
 });

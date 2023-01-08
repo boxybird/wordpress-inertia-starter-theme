@@ -1,5 +1,5 @@
 import path from 'path'
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import VitePluginVue from '@vitejs/plugin-vue'
 import VitePluginFullReload from 'vite-plugin-full-reload'
 
@@ -8,7 +8,6 @@ const themeDirName = path.basename(__dirname)
 export default defineConfig({
   plugins: [
     VitePluginVue(),
-    // splitVendorChunkPlugin(),
     VitePluginFullReload([
       './**/*.php'
     ])
