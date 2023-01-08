@@ -4,6 +4,7 @@ use BoxyBird\Inertia\Inertia;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+// Enqueue bundles using type=module
 add_filter( 'script_loader_tag', function ( $tag, $handle, $src ) {
 
     $url = esc_url($src);
@@ -28,8 +29,6 @@ add_filter( 'script_loader_tag', function ( $tag, $handle, $src ) {
 add_action('wp_enqueue_scripts', function () {
     
     $environment = wp_get_environment_type();
-
-    $version = md5_file(get_stylesheet_directory() . '/dist/app.js');
 
     // serve dev bundle
 
@@ -60,6 +59,5 @@ add_action('after_setup_theme', function () {
 // Add Inertia version. Helps with cache busting
 add_action('after_setup_theme', function () {
     $version = md5_file(get_stylesheet_directory() . '/dist/manifest.json');
-
     Inertia::version($version);
 });
