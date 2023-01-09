@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  db:
+    image: mariadb:10.6.4-focal
+    restart: always
+    volumes:
+      - container-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    image: wordpress:latest
+    # uncomment if you're on mac silicon
+    # platform: linux/amd64
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/html/wp-content/themes/wordpress-inertia-starter-theme
+    environment:
+      WORDPRESS_DEBUG: 1
+      WP_ENVIRONMENT_TYPE: development
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    ports:
+      - 8000:80
+
+volumes:
+  container-volume:
