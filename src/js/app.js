@@ -12,7 +12,7 @@ createInertiaApp({
     const page = import(`./Pages/${name}.vue`)
 
     // Use global layout for all pages, unless overridden by individual page.
-    page.layout ??= Layout
+    page.default.layout ??= Layout
 
     return page
 
