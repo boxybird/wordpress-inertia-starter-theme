@@ -7,7 +7,7 @@ const themeDirName = path.basename(__dirname)
 
 export default defineConfig({
   plugins: [
-    splitVendorChunkPlugin(),
+    // splitVendorChunkPlugin(),
     VitePluginVue(),
     VitePluginFullReload([
       './**/*.php'
@@ -17,6 +17,10 @@ export default defineConfig({
     '/' :
     '/wp-content/themes/' + themeDirName + '/dist/',
   server: {
+    watch: {
+      // watch all vue files
+      
+    },
     port: 3000,
     strictPort: true
   },
@@ -25,13 +29,9 @@ export default defineConfig({
     manifest: true,
     emptyOutDir: true,
     outDir: 'dist',
-    target: 'es2015',
     rollupOptions: {
       input: {
         app: 'src/js/app.js'
-      },
-      output: {
-        entryFileNames: 'app.js'
       }
     },
   },
