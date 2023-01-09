@@ -13,8 +13,4 @@ import Header from './Header.vue'
 import Footer from './Footer.vue'
 </script>
 
-<style>
-  main {
-    background-color: yellow;
-  }
-</style>
+<style></style>

@@ -2,7 +2,7 @@ import 'vite/modulepreload-polyfill'
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-import Layout from './shared/Layout.vue'
+import Layout from './Shared/Layout.vue'
 
 InertiaProgress.init()
 
